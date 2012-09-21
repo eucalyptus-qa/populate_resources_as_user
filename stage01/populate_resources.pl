@@ -161,11 +161,14 @@ wait_for_snapshot();
 settrycount(180);
 print "SUCCESS: snapshot became available: snap=$current_artifacts{snapshotstate}\n";
 
+terminate_instances();
+print "SUCCESS: terminated running instances\n";
+
 #run_command("euca-allocate-address");			###	ADDED TO POPULATE ADDRESS	092012
 
 print "\n\n";
 print "==========================================================";
-print " POPULATED EBS ";
+print " POPULATED RESOURCES ";
 print "==========================================================";
 print "\n\n";
 
