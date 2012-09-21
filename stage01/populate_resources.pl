@@ -82,6 +82,7 @@ print "SUCCESS: volume became available: vol=$current_artifacts{volume}, volstat
 
 attach_volume();
 print "SUCCESS: attached volume: volstate=$current_artifacts{volumestate}\n";
+sleep(60);
 
 wait_for_volume_attach();
 print "SUCCESS: volume became attached: volstate=$current_artifacts{volumestate}\n";
