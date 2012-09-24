@@ -93,7 +93,7 @@ print "SUCCESS: discovered instance local EBS dev name: $idev\n";
 
 setrunat("runat 180");
 run_instance_command("echo y | mkfs.ext3 $idev");
-setrunat("runat 30");
+setrunat("runat 180");
 run_instance_command("mkdir -p /tmp/testmount");
 run_instance_command("mount $idev /tmp/testmount");
 run_instance_command("dd if=/dev/zero of=/tmp/testmount/file bs=1M count=10");
